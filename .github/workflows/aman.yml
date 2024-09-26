@@ -1,17 +1,16 @@
-name: CI Workflow   # Name of the workflow
-
+name: Aman
 on:
   push:
     branches:
-      - main   # The workflow triggers on push events to the "main" branch
+      - main  
 
 jobs:
-  build:  # A job named "build"
-    runs-on: ubuntu-latest   # The virtual machine that will run the job
+  build: 
+    runs-on: ubuntu-latest  
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3   # Step to checkout the code
+        uses: actions/checkout@v3   
 
-      - name: Run tests
-        run: echo "Running tests..."   # A simple command to simulate running tests
+      - name: Build && Deploy new version
+        run: echo "Running tests"   # 
