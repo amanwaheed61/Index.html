@@ -13,6 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Deploy to GitHub Pages
+      - name: Create public directory and copy files
         run: |
-          cp -R * public/ # Assuming 'public/' is your target directory for deployment
+          mkdir -p public   # Create the public directory
+          cp -R * public/   # Copy all files to the public directory
