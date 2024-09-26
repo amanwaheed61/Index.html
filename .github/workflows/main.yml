@@ -13,7 +13,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Create public directory and copy files
+      - name: Deploy HTML File
         run: |
-          mkdir -p public   # Create the public directory
-          cp -R * public/   # Copy all files to the public directory
+          # Optionally create a deployment directory if needed, remove this if not necessary
+          mkdir -p public 
+          cp *.html public/  # Copy only HTML files to public directory
